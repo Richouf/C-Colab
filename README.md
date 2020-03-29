@@ -1,13 +1,8 @@
-# C-Colab - 
+# C-Colab 
 
 						Github Desktop
 
 https://desktop.githubusercontent.com/releases/2.4.0-568b4113/GitHubDesktopSetup.exe
-
-
-						Install VS Code //yes
-
-https://code.visualstudio.com/download
 
 
 						Install VS C++ Community
