@@ -13,8 +13,7 @@ public:
 	bool TTTmove(char TTTplace);
 	bool TTTwinstatus();
 	char TTTplayer_current = 'X';
-	const char* TTTupdate();
-	const char* TTTwinplayer();
+	char* TTTupdate();
 
 private:
 	char TTTboard[3][3] = { {'1','2','3'},{'4','5','6'},{'7','8','9'} };
