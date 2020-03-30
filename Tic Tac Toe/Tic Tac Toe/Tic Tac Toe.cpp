@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "Tic Tac Toe.h"
+#include "TTTgame.h"
 
 #define MAX_LOADSTRING 100
 
@@ -26,6 +27,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: Place code here.
+
+    
 
     // Initialize global strings
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -66,8 +69,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 {
     WNDCLASSEXW wcex;
 
-    wcex.cbSize = sizeof(WNDCLASSEX);
-
+    wcex.cbSize         = sizeof(WNDCLASSEX);
     wcex.style          = CS_HREDRAW | CS_VREDRAW;
     wcex.lpfnWndProc    = WndProc;
     wcex.cbClsExtra     = 0;
@@ -137,6 +139,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             case IDM_EXIT:
                 DestroyWindow(hWnd);
                 break;
+            case ID_HELP_PRINT:
+                PrintWindow(FindWindow(TEXT("Tic Tac Toe"), TEXT("xxx.txt - Tic Tac Toe")), GetDC(hWnd), 0);
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);
             }
@@ -177,4 +181,4 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     }
     return (INT_PTR)FALSE;
-}
+};

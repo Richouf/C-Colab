@@ -151,9 +151,12 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tic Tac Toe.h" />
+    <ClInclude Include="TTTgame.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Tic Tac Toe.cpp" />
+    <ClCompile Include="TTTgame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Tic Tac Toe.rc" />
