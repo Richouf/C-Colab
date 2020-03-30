@@ -40,28 +40,35 @@ const char* TTTgame::TTTwinplayer()
 #include <iostream>
 #include "TTTgame.h"
 
-//initialise game
-TTTgame tictactoe = TTTgame(2);
+using namespace std;
+
+int main()
+{
+	//initialise game
+	TTTgame tictactoe = TTTgame(2);
 
 //get game board
 char tictactoeboard[3][3] = tictactoe.TTTupdate();
 
-cout << tictactoe.TTTplayer_current << "'s move first" << '\n';
+const char* boardvia = *tictactoeboard;
+
+std::cout << tictactoe.TTTplayer_current << "'s move first" << '\n';
 
 //game loop
-while(!tictactoe.TTTwinstatus())
+while (!(tictactoe.TTTwinstatus()))
 {
 	//make move
 	char move;
-	cin >> move;
-	if(tictactoe.TTTmove(move))
+	std::cin >> move;
+	if (tictactoe.TTTmove(move))
 	{
-		tictactoeboard = tictactoe.TTTupdate();
+		boardvia = tictactoe.TTTupdate();
 	}
 	else
 	{
-		cout << "Bad Move, try again" << '\n';
+		std::cout << "Bad Move, try again" << '\n';
 	}
-	cout << "Next move for" << tictactoe.TTTplayer_current << '\n';
+	std::cout << "Next move for" << tictactoe.TTTplayer_current << '\n';
+}
 }
 */
