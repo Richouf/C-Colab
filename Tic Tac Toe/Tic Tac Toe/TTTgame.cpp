@@ -23,7 +23,6 @@ bool TTTgame::TTTmove(char TTTplace)
 				TTTwinner = ((TTTboard[i][0] == TTTboard[i][1] && TTTboard[i][0] == TTTboard[i][2]) || (TTTboard[0][i2] == TTTboard[1][i2]) && TTTboard[0][i2] == TTTboard[2][i2]) || (TTTboard[0][0] == TTTboard[1][1] && TTTboard[0][0] == TTTboard[2][2]) || (TTTboard[0][2] == TTTboard[1][1] && TTTboard[0][2] == TTTboard[2][0]) ? TTTplayer_current : '0';
 				if (TTTwinner == '0')
 					TTTplayer_current = TTTplayer_current == 'X' ? 'O' : 'X';
-
 			}
 		}
 
@@ -44,6 +43,12 @@ bool TTTgame::TTTwinstatus()
 	return status;
 };
 
+bool TTTgame::TTTendGame()
+{
+	char TTTboard[3][3] = { {'1','2','3'},{'4','5','6'},{'7','8','9'} };
+	char TTTwinner = '0';
+	return true;
+}
 /*
 #include <iostream>
 #include "TTTgame.h"
