@@ -1,22 +1,18 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by Tic Tac Toe.rc
+// Used by Tic Tac Toe UI.rc
 
 #define IDS_APP_TITLE			103
 
 #define IDR_MAINFRAME			128
-#define IDD_TICTACTOE_DIALOG	102
+#define IDD_TICTACTOEUI_DIALOG	102
 #define IDD_ABOUTBOX			103
 #define IDM_ABOUT				104
 #define IDM_EXIT				105
-#define IDI_TICTACTOE			107
+#define IDI_TICTACTOEUI			107
 #define IDI_SMALL				108
-#define IDC_TICTACTOE			109
-#define IDC_TTTBTN				110
-#define IDM_START				111
-#define IDD_SIZES				112
+#define IDC_TICTACTOEUI			109
 #define IDC_MYICON				2
-#define ID_PRINT				32770
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1
 #endif
