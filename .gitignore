@@ -17,3 +17,8 @@
 *.ilk
 *.lastcodeanalysissucceeded
 *.exe
+*.VC
+*.suo
+*.ipch
+*.db
+*.sln
