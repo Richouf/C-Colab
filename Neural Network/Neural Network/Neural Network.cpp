@@ -31,7 +31,7 @@ int main()
     myNet.feedForward(inputVals);
     myNet.backProp(targetVals);
     myNet.getResults(resultVals);
-    Results.open("E:\\C++_Programming\\NeuralData\\Neural Network Results.csv");
+    Results.open("Neural Network Results.csv");
     Results << "Test Number, Average Error, Result 1, Result 2, Result 3, Result 4, Result 5, Result 6, Result 7, Result 8, Result 9" << endl;
 
     for (unsigned i = 0; i < 2000; ++i)
@@ -54,7 +54,7 @@ int main()
 
     myNet.getPathWeights(pathMap);
     Results.close();
-    Results.open("E:\\C++_Programming\\NeuralData\\Neural Paths.csv");
+    Results.open("Neural Paths.csv");
     unsigned numLayers = pathMap.size();
     cout << '\n' << pathMap.size() << '\n';
     for (unsigned layerNum = 0; layerNum < numLayers; ++layerNum)
