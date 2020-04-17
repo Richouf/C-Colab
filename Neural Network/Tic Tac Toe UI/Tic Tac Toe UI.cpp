@@ -3,8 +3,9 @@
 
 #include "framework.h"
 #include "Tic Tac Toe UI.h"
-#include "Tic Tac Toe.h"
+#include "Net.h"
 #include <string>
+#include "TTTGame.h"
 #define MAX_LOADSTRING 100
 bool bDrawBoard = false;
 
@@ -52,6 +53,11 @@ void DrawO(HDC hdc, int x1, int y1, int x2, int y2, int width)
     Arc(hdc, x1, y1, x2, y2, 0, 0, 0, 0);
     SelectObject(hdc, hPenOld);
     DeleteObject(hLinePen);
+
+}
+
+void RunNN()
+{
 
 }
 

@@ -22,7 +22,7 @@ int main()
     topology.push_back(9);
     Net myNet(topology);
 
-    vector<double> inputVals = { 0.0, 1.0, .5, 0.0, 1.0, .5, 0.0, 0.0, .5 };
+    vector<double> inputVals = { 0.0, 1.0, -1.0, 0.0, 1.0,-1.0, 0.0, 0.0, -1.0 };
     vector<double> targetVals = { 0.5, 0.0, 0.0, 0.5, 0.0, 0.0, 0.5, 1.0, 0.0 };
     vector<double> resultVals;
     vector<vector<vector<double>>> pathMap;
@@ -34,7 +34,7 @@ int main()
     Results.open("Neural Network Results.csv");
     Results << "Test Number, Average Error, Result 1, Result 2, Result 3, Result 4, Result 5, Result 6, Result 7, Result 8, Result 9" << endl;
 
-    for (unsigned i = 0; i < 2000; ++i)
+    for (unsigned i = 0; i < 10000; ++i)
     {
         myNet.feedForward(inputVals);
         myNet.backProp(targetVals);
